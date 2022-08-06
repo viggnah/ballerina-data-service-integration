@@ -1,0 +1,11 @@
+[database_config]
+USER="root"
+HOST="localhost"
+PORT=3306
+DATABASE="demopresentation"
+
+[service_config]
+PORT=6290
+
+[local_csv_file]
+PATH="local_file_record.csv"
