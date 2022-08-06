@@ -17,7 +17,7 @@ service /customer on new http:Listener(<int>service_config["PORT"]) {
         sql:ExecutionResult result = check insertCustomerIntoDB(mysqlClient, customer);
         io:println(result);
 
-        // check writeToCsvFile(createCsvRow(result, customer));
+        check writeToCsvFile(createCsvRow(result, customer));
         return "Successfully inserted customer into database with CustomerID = " + result.lastInsertId.toString();
     }
 }
